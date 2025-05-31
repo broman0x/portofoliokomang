@@ -35,14 +35,14 @@ const Experience = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              whileHover={{ scale: 1.03, boxShadow: '0 0 15px rgba(239, 68, 68, 0.5)' }}
+              whileHover={{ scale: 1.03, boxShadow: '0 0 15px rgba(255, 255, 255, 0.5)' }}
               transition={{ duration: 0.7, delay: index * 0.2 }}
             >
-              <h3 className="text-base sm:text-lg font-semibold text-[#EF4444] mb-2">{exp.title}</h3>
-              <p className="text-[#94A3B8] text-xs sm:text-sm">
+              <h3 className="text-base sm:text-lg font-semibold text-[#FFFFFF] mb-2">{exp.title}</h3>
+              <p className="text-[#64748B] text-xs sm:text-sm">
                 {exp.company} | {exp.period}
               </p>
-              <p className="text-[#F1F5F9] mt-3 text-xs sm:text-sm">{exp.description}</p>
+              <p className="text-[#E2E8F0] mt-3 text-xs sm:text-sm">{exp.description}</p>
             </motion.div>
           ))}
         </div>
