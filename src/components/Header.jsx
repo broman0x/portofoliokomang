@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-// Komponen header dengan navigasi
+// Komponen Header
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Deteksi scroll untuk mengubah ukuran header
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const navLinks = [
     { name: 'Tentang', href: '#about' },
@@ -24,56 +18,61 @@ const Header = () => {
     { name: 'Kontak', href: '#contact' },
   ];
 
-  const headerVariants = {
-    initial: { y: -100, opacity: 0 },
-    animate: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  const navVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, staggerChildren: 0.1 } },
+  };
+
+  const linkVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
-    <motion.header
-      className={`header ${isScrolled ? 'py-2' : 'py-3 sm:py-4'}`}
-      variants={headerVariants}
-      initial="initial"
-      animate="animate"
-    >
+    <header className="header">
       <div className="container flex items-center justify-between">
-        <a href="/" className="text-[#EF4444] text-sm sm:text-base font-bold">
+        <motion.a
+          href="#home"
+          className="text-[#FFFFFF] text-base sm:text-lg font-bold"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           I Komang Agus Tri Astawan
-        </a>
-        <nav className="hidden sm:flex space-x-4">
-          {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="nav-link">
-              {link.name}
-            </a>
-          ))}
-        </nav>
+        </motion.a>
         <div className="sm:hidden">
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="hamburger flex flex-col justify-between h-5"
-            aria-label="Toggle menu"
+            onClick={toggleMenu}
+            className="hamburger focus:outline-none"
+            aria-label={isOpen ? 'Tutup menu' : 'Buka menu'}
           >
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
+            <span className={`hamburger-line ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+            <span className={`hamburger-line my-1 ${isOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`hamburger-line ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
           </button>
         </div>
+        <motion.nav
+          className={`nav-menu ${isOpen ? 'block' : 'hidden'} sm:block`}
+          variants={navVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <ul className="flex flex-col sm:flex-row sm:space-x-4">
+            {navLinks.map((link, index) => (
+              <motion.li key={index} variants={linkVariants}>
+                <a
+                  href={link.href}
+                  className="nav-link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.nav>
       </div>
-      {isOpen && (
-        <nav className="nav-menu sm:hidden">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="nav-link block py-2 text-center"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
-      )}
-    </motion.header>
+    </header>
   );
 };
 
