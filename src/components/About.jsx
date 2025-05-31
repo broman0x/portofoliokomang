@@ -18,7 +18,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="mb-10 sm:mb-14">
+    <section id="about" className="mt-4 mb-10 sm:mb-14">
       <h2 className="section-title">Tentang Saya</h2>
       <motion.div
         className="card flex flex-col items-start gap-4 sm:gap-6 md:flex-row"
@@ -42,10 +42,10 @@ const About = () => {
         </motion.div>
         <div className="text-left">
           <h3 className="text-base sm:text-lg font-semibold text-[#FFFFFF] mb-2">
-            I Komang Agus Tri Astawan, S. Farm
+            I Komang Agus Tri Astawan, S. Farm 
           </h3>
           <p className="text-[#E2E8F0] text-xs sm:text-sm leading-relaxed">
-            Lulusan S1 Farmasi Klinis dari kampus Universitas Bali Internasional. Saya senang belajar hal baru, mempunyai kesabaran dalam menghadapi masalah. Aktif mengikuti kegiatan sosial dan memiliki pengalaman kerja 1+ tahun dalam bidang kefarmasian.
+            Lulusan S1 Farmasi Klinis dari kampus Universitas Bali Internasional. Saya senang belajar hal baru, mempunyai kesabaran dalam menghadapi masalah. Aktif mengikuti kegiatan sosial dan memiliki pengalaman kerja 1+ tahun dalam bidang kefarmasian
           </p>
         </div>
       </motion.div>
