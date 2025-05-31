@@ -6,7 +6,7 @@ const Project = () => {
   const projects = [
     {
       title: 'Skripsi: Hubungan Kewaspadaan terhadap Penyakit Diabetes Mellitus',
-      period: '2023',
+      period: '2020 - Desember 2021',
       description:
         'Meneliti hubungan antara kewaspadaan diri dan kepatuhan pasien Diabetes Mellitus Tipe 2 di Puskesmas IV Denpasar Selatan, dengan fokus pada edukasi kesehatan dan pengelolaan penyakit kronis.',
       link: 'https://journal.ummat.ac.id/index.php/farmasi/article/view/17054',
@@ -19,7 +19,7 @@ const Project = () => {
   };
 
   const buttonVariants = {
-    hover: { scale: 1.1, boxShadow: '0 0 12px rgba(239, 68, 68, 0.7)' },
+    hover: { scale: 1.1, boxShadow: '0 0 12px rgba(255, 255, 255, 0.7)' },
     tap: { scale: 0.9 },
   };
 
@@ -36,17 +36,17 @@ const Project = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              whileHover={{ scale: 1.03, boxShadow: '0 0 15px rgba(239, 68, 68, 0.5)' }}
+              whileHover={{ scale: 1.03, boxShadow: '0 0 15px rgba(255, 255, 255, 0.5)' }}
               transition={{ duration: 0.7, delay: index * 0.1 }}
             >
-              <h3 className="text-base sm:text-lg font-semibold text-[#EF4444] mb-2">{proj.title}</h3>
-              <p className="text-[#94A3B8] text-xs sm:text-sm">{proj.period}</p>
-              <p className="text-[#F1F5F9] mt-3 text-xs sm:text-sm">{proj.description}</p>
+              <h3 className="text-base sm:text-lg font-semibold text-[#FFFFFF] mb-2">{proj.title}</h3>
+              <p className="text-[#64748B] text-xs sm:text-sm">{proj.period}</p>
+              <p className="text-[#E2E8F0] mt-3 text-xs sm:text-sm">{proj.description}</p>
               <motion.a
                 href={proj.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button mt-4 inline-block"
+                className="mt-4 inline-block bg-[#333333] text-[#FFFFFF] px-5 py-2 rounded-md hover:bg-[#4B5563] transition-all duration-300 font-medium text-xs sm:text-sm shadow-[0_0_8px_rgba(255,255,255,0.3)]"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
