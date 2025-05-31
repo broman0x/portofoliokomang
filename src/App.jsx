@@ -52,25 +52,6 @@ const App = () => {
           <Contact />
         </motion.section>
       </motion.main>
-      <footer className="bg-[#333333] text-[#FFFFFF] text-center py-6">
-        <div className="container">
-          <p className="text-xs mb-3">© 2025 Mksigyt. Hak Cipta Dilindungi.</p>
-          <motion.a
-            href="https://x.com/mksigyt"
-            className="footer-link"
-            aria-label="Kunjungi profil Twitter Mksigyt"
-            whileHover={{
-              scale: 1.2,
-              color: '#E2E8F0',
-              textShadow: '0 0 8px rgba(226, 232, 240, 0.8)',
-            }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaXTwitter className="text-xl sm:text-2xl mx-auto" />
-          </motion.a>
-        </div>
-      </footer>
     </div>
   );
 };
