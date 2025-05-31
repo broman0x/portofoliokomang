@@ -25,10 +25,10 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#333333]">
+    <div className="min-h-screen bg-[#666666]">
       <Header />
       <motion.main
-        className="container mx-auto px-4 sm:py-14"
+        className="container pt-16 sm:pt-20 pb-10 sm:pb-14"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
