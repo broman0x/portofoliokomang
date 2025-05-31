@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Orbitron', sans-serif;
-  color: #F1F5F9;
+  color: #E2E8F0;
 }
 
 .section-title {
@@ -16,7 +16,7 @@ body {
 }
 
 .card {
-  @apply bg-[#2D3A3A] rounded-lg p-4 sm:p-6 transition-all duration-500 relative border border-[#EF4444]/20 shadow-[0_0_10px_rgba(239,68,68,0.1)];
+  @apply bg-[#A0A0A0] rounded-lg p-4 sm:p-6 transition-all duration-500 relative border border-[#EF4444]/20 shadow-[0_0_10px_rgba(239,68,68,0.1)];
 }
 
 .card:hover {
@@ -32,7 +32,7 @@ body {
 }
 
 .nav-link {
-  @apply text-[#F1F5F9] relative hover:text-[#EF4444] transition-colors duration-300 font-medium text-xs sm:text-sm;
+  @apply text-[#E2E8F0] relative hover:text-[#EF4444] transition-colors duration-300 font-medium text-xs sm:text-sm;
 }
 
 .nav-link::after {
@@ -48,7 +48,7 @@ body {
 }
 
 .button {
-  @apply bg-[#EF4444] text-[#F1F5F9] px-5 py-2 rounded-md hover:bg-[#DC2626] transition-all duration-300 font-medium text-xs sm:text-sm shadow-[0_0_8px_rgba(239,68,68,0.3)];
+  @apply bg-[#EF4444] text-[#E2E8F0] px-5 py-2 rounded-md hover:bg-[#DC2626] transition-all duration-300 font-medium text-xs sm:text-sm shadow-[0_0_8px_rgba(239,68,68,0.3)];
 }
 
 .container {
@@ -56,7 +56,7 @@ body {
 }
 
 .footer-link {
-  @apply text-[#F1F5F9] hover:text-[#EF4444] transition-colors duration-300;
+  @apply text-[#E2E8F0] hover:text-[#EF4444] transition-colors duration-300;
 }
 
 .hamburger {
@@ -64,7 +64,7 @@ body {
 }
 
 .hamburger-line {
-  @apply w-full h-0.5 bg-[#F1F5F9] rounded transition-all duration-300;
+  @apply w-full h-0.5 bg-[#E2E8F0] rounded transition-all duration-300;
 }
 
 .nav-menu {
