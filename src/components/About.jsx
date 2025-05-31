@@ -26,7 +26,7 @@ const About = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        whileHover={{ scale: 1.03, boxShadow: '0 0 20px rgba(239, 68, 68, 0.5)' }}
+        whileHover={{ scale: 1.03, boxShadow: '0 0 20px rgba(255, 255, 255, 0.5)' }}
       >
         <motion.div
           className="relative w-24 h-24 sm:w-36 sm:h-36"
@@ -41,11 +41,11 @@ const About = () => {
           />
         </motion.div>
         <div className="text-left">
-          <h3 className="text-base sm:text-lg font-semibold text-[#EF4444] mb-2">
+          <h3 className="text-base sm:text-lg font-semibold text-[#FFFFFF] mb-2">
             I Komang Agus Tri Astawan, S. Farm
           </h3>
-          <p className="text-[#F1F5F9] text-xs sm:text-sm leading-relaxed">
-            Calon apoteker dengan gelar Sarjana Farmasi, fokus pada inovasi farmasi dan pelayanan pasien yang empatik untuk meningkatkan kesehatan masyarakat.
+          <p className="text-[#E2E8F0] text-xs sm:text-sm leading-relaxed">
+            Lulusan S1 Farmasi Klinis dari kampus Universitas Bali Internasional. Saya senang belajar hal baru, mempunyai kesabaran dalam menghadapi masalah. Aktif mengikuti kegiatan sosial dan memiliki pengalaman kerja 1+ tahun dalam bidang kefarmasian.
           </p>
         </div>
       </motion.div>
