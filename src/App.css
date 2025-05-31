@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  color: #F1F5F9;
+}
+
+.section-title {
+  @apply text-xl sm:text-2xl font-bold text-[#EF4444] mb-6 sm:mb-8 text-center uppercase tracking-wider;
+}
+
+.section-title::after {
+  @apply content-[''] block mx-auto mt-1 w-12 h-0.5 bg-[#EF4444] shadow-[0_0_5px_#EF4444];
+}
+
+.card {
+  @apply bg-[#2D3A3A] rounded-lg p-4 sm:p-6 transition-all duration-500 relative border border-[#EF4444]/20 shadow-[0_0_10px_rgba(239,68,68,0.1)];
+}
+
+.card:hover {
+  @apply shadow-[0_0_15px_rgba(239,68,68,0.5)] border-[#EF4444]/50;
+}
+
+.card::before {
+  @apply content-[''] absolute inset-0 bg-[#EF4444]/10 opacity-0 transition-opacity duration-500;
+}
+
+.card:hover::before {
+  @apply opacity-100;
+}
+
+.nav-link {
+  @apply text-[#F1F5F9] relative hover:text-[#EF4444] transition-colors duration-300 font-medium text-xs sm:text-sm;
+}
+
+.nav-link::after {
+  @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-[#EF4444] transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.header {
+  @apply bg-[#000000]/50 fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 sm:py-4 shadow-[0_0_10px_rgba(239,68,68,0.3)] border-b border-[#EF4444]/30;
+}
+
+.button {
+  @apply bg-[#EF4444] text-[#F1F5F9] px-5 py-2 rounded-md hover:bg-[#DC2626] transition-all duration-300 font-medium text-xs sm:text-sm shadow-[0_0_8px_rgba(239,68,68,0.3)];
+}
+
+.container {
+  @apply max-w-5xl mx-auto px-4 sm:px-6;
+}
+
+.footer-link {
+  @apply text-[#F1F5F9] hover:text-[#EF4444] transition-colors duration-300;
+}
+
+.hamburger {
+  @apply w-5 h-5 cursor-pointer;
+}
+
+.hamburger-line {
+  @apply w-full h-0.5 bg-[#F1F5F9] rounded transition-all duration-300;
+}
+
+.nav-menu {
+  @apply absolute top-full left-0 right-0 bg-[#000000]/95 p-3 rounded-b-md shadow-[0_0_10px_rgba(239,68,68,0.2)] sm:static sm:bg-transparent sm:p-0 sm:shadow-none sm:flex sm:space-x-4;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px rgba(239, 68, 68, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(239, 68, 68, 0.8); }
+  100% { box-shadow: 0 0 5px rgba(239, 68, 68, 0.5); }
+}
+
+.neon-ring {
+  @apply absolute inset-0 rounded-full border-2 border-[#EF4444] animate-pulse;
+}
