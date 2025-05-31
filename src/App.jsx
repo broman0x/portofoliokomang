@@ -25,7 +25,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#334155]">
+    <div className="min-h-screen bg-[#7F7F7F]">
       <Header />
       <motion.main
         className="container py-10 sm:py-14"
